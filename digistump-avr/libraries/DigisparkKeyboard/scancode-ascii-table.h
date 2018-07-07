@@ -3,6 +3,14 @@
 // Format: most signifficant bit indicates if scan code should be sent with shift modifier
 // remaining 7 bits are to be used as scan code number.
 
+/* usefull links
+http://thebrazilbusiness.com/article/getting-brazilian-characters-on-your-international-keyboard
+https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_br_abnt2.h
+https://www.sparkfun.com/tutorials/337
+https://github.com/hak5darren/USB-Rubber-Ducky/tree/master/Encoder/resources
+*/
+
+
 const unsigned char ascii_to_scan_code_table[] PROGMEM = {
   // /* ASCII:   0 */ 0,
   // /* ASCII:   1 */ 0,
@@ -38,12 +46,12 @@ const unsigned char ascii_to_scan_code_table[] PROGMEM = {
   /* ASCII:  31 */ 0,
   /* ASCII:  32 */ 44,
   /* ASCII:  33 */ 158,
-  /* ASCII:  34 */ 180,
+  /* ASCII:  34 */ 181, // key: "
   /* ASCII:  35 */ 160,
   /* ASCII:  36 */ 161,
   /* ASCII:  37 */ 162,
   /* ASCII:  38 */ 164,
-  /* ASCII:  39 */ 52,
+  /* ASCII:  39 52*/ 53, //  key: ' 
   /* ASCII:  40 */ 166,
   /* ASCII:  41 */ 167,
   /* ASCII:  42 */ 165,
@@ -51,7 +59,7 @@ const unsigned char ascii_to_scan_code_table[] PROGMEM = {
   /* ASCII:  44 */ 54,
   /* ASCII:  45 */ 45,
   /* ASCII:  46 */ 55,
-  /* ASCII:  47 */ 56,
+  /* ASCII:  47 */ 73, // key: /
   /* ASCII:  48 */ 39,
   /* ASCII:  49 */ 30,
   /* ASCII:  50 */ 31,
@@ -62,12 +70,12 @@ const unsigned char ascii_to_scan_code_table[] PROGMEM = {
   /* ASCII:  55 */ 36,
   /* ASCII:  56 */ 37,
   /* ASCII:  57 */ 38,
-  /* ASCII:  58 */ 179,
-  /* ASCII:  59 */ 51,
+  /* ASCII:  58 *179*/ , 184 // key: :
+  /* ASCII:  59 *51*/56, // key: ;
   /* ASCII:  60 */ 182,
   /* ASCII:  61 */ 46,
   /* ASCII:  62 */ 183,
-  /* ASCII:  63 */ 184,
+  /* ASCII:  63 */ 201, //  key: ?
   /* ASCII:  64 */ 159,
   /* ASCII:  65 */ 132,
   /* ASCII:  66 */ 133,
@@ -95,12 +103,12 @@ const unsigned char ascii_to_scan_code_table[] PROGMEM = {
   /* ASCII:  88 */ 155,
   /* ASCII:  89 */ 156,
   /* ASCII:  90 */ 157,
-  /* ASCII:  91 */ 47,
+  /* ASCII:  91 47*/ 48,
   /* ASCII:  92 */ 49,
-  /* ASCII:  93 */ 48,
-  /* ASCII:  94 */ 163,
+  /* ASCII:  93 */ 49,
+  /* ASCII:  94 163*/180, // key: ^ (dead key)
   /* ASCII:  95 */ 173,
-  /* ASCII:  96 */ 53,
+  /* ASCII:  96 53*/175,
   /* ASCII:  97 */ 4,
   /* ASCII:  98 */ 5,
   /* ASCII:  99 */ 6,
@@ -127,8 +135,9 @@ const unsigned char ascii_to_scan_code_table[] PROGMEM = {
   /* ASCII: 120 */ 27,
   /* ASCII: 121 */ 28,
   /* ASCII: 122 */ 29,
-  /* ASCII: 123 */ 175,
+  /* ASCII: 123 175*/ 176,
   /* ASCII: 124 */ 177,
-  /* ASCII: 125 */ 176,
-  /* ASCII: 126 */ 181
+  /* ASCII: 125 */ 177,
+  /* ASCII: 126 */ 181,
+  /* ASCII: 127 */ 52, // key: ~ (dead key)
 };

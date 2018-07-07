@@ -109,9 +109,24 @@ const PROGMEM char usbHidReportDescriptor[USB_CFG_HID_REPORT_DESCRIPTOR_LENGTH] 
 #define KEY_9       38
 #define KEY_0       39
 
-#define KEY_ENTER   40
-
-#define KEY_SPACE   44
+#define KEY_ENTER 40
+#define KEY_ESC 41
+#define KEY_BACKSPACE 42
+#define KEY_TAB 43
+#define KEY_SPACE 44
+#define KEY_MINUS 45
+#define KEY_EQUAL 46
+#define KEY_LEFT_BRACE 47
+#define KEY_RIGHT_BRACE 48
+#define KEY_BACKSLASH 49
+#define KEY_NON_US_NUM 50
+#define KEY_SEMICOLON 51
+#define KEY_QUOTE 52
+#define KEY_TILDE 53
+#define KEY_COMMA 54
+#define KEY_PERIOD 55
+#define KEY_SLASH 56
+#define KEY_CAPS_LOCK 57
 
 #define KEY_F1      58
 #define KEY_F2      59
@@ -126,10 +141,67 @@ const PROGMEM char usbHidReportDescriptor[USB_CFG_HID_REPORT_DESCRIPTOR_LENGTH] 
 #define KEY_F11     68
 #define KEY_F12     69
 
-#define KEY_ARROW_UP        82
-#define KEY_ARROW_DOWN      81
-#define KEY_ARROW_LEFT      80
-#define KEY_ARROW_RIGHT     79
+#define KEY_PRINTSCREEN     70
+#define KEY_SCROLL_LOCK     71
+#define KEY_PAUSE     72
+#define KEY_INSERT     73
+#define KEY_HOME     74
+#define KEY_PAGEUP     75
+#define KEY_DELETE     76
+#define KEY_END     77
+#define KEY_PAGEDOWN     78
+#define KEY_RIGHT     79
+#define KEY_LEFT     80
+#define KEY_DOWN     81
+#define KEY_UP     82
+#define KEY_NUM_LOCK     83
+#define KEYPAD_SLASH     84
+#define KEYPAD_ASTERIX     85
+#define KEYPAD_MINUS     86
+#define KEYPAD_PLUS     87
+#define KEYPAD_ENTER     88
+#define KEYPAD_EQUALS     103
+#define KEYPAD_1     89
+#define KEYPAD_2     90
+#define KEYPAD_3     91
+#define KEYPAD_4     92
+#define KEYPAD_5     93
+#define KEYPAD_6     94
+#define KEYPAD_7     95
+#define KEYPAD_8     96
+#define KEYPAD_9     97
+#define KEYPAD_0     98
+#define KEYPAD_PERIOD     99
+
+#define KEY_APP         0x65
+#define KEY_POWER   0x66
+#define KEY_EXE         0x74
+#define KEY_HELP       0x75
+#define KEY_MENU      0x76
+#define KEY_SELECT   0x77
+#define KEY_STOP       0x78
+#define KEY_AGAIN     0x79
+#define KEY_UNDO      0x7A
+#define KEY_CUT         0x7B
+#define KEY_COPY      0x7C
+#define KEY_PASTE     0x7D
+#define KEY_FIND        0x7E
+
+#define KEY_SYSTEM_POWER    0x81
+#define KEY_SYSTEM_SLEEP      0x82
+#define KEY_SYSTEM_WAKE       0x83
+ 
+#define KEYPAD_PIPE   0xC9
+
+#define KEY_LEFT_CTRL     0xE0
+#define KEY_LEFT_SHIFT    0xE1
+#define KEY_LEFT_ALT        0xE2
+#define KEY_LEFT_GUI        0xE3
+#define KEY_COMMAND      0xE3
+#define KEY_RIGHT_CTRL   0xE4
+#define KEY_RIGHT_SHIFT   0xE5
+#define KEY_RIGHT_ALT       0xE6
+#define KEY_RIGHT_GUI       0xE7
 
 class DigiKeyboardDevice : public Print {
  public:
