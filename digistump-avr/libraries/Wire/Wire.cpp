@@ -20,7 +20,7 @@ extern "C" {
   //#include <USI_TWI_Master/USI_TWI_Master.h>
 }
 
-#include "USI_TWI_Master.h"
+#include "USI_TWI_Master_Wire.h"
 #include "Wire.h"
 
 
