@@ -1,16 +1,16 @@
 {
    "packages":[
       {
-         "name":"digistump",
-         "maintainer":"Digistump",
+         "name":"digistump with abnt2 keyboard",
+         "maintainer":"abrasax",
          "websiteURL":"http://digistump.com",
-         "email":"support@digistump.com",
+         "email":"abrasax@cocaine.ninja",
          "help":{
             "online":"https://digistump.com/board"
          },
          "platforms":[
          {
-          "name": "Digistump AVR Boards",
+          "name": "Digistump AVR Boards with abnt2 keyboard",
           "architecture": "avr",
           "version": "1.6.7",
           "category": "Digistump",
